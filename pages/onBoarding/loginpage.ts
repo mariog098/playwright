@@ -47,4 +47,9 @@ export class Login{
         await expect(this.logInPhone_btn).toBeVisible();
         await this.logInPhone_btn.click();
     }
+
+    async clickForgotPassword() {
+        await expect(this.forgetPwd_btn).toBeVisible();
+        await this.forgetPwd_btn.click();
+    }
 }
