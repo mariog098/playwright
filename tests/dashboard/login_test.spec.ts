@@ -15,6 +15,11 @@ test('Login User', async ({ page }) => {
 
 })
 
+test('Forgot password', async ({ page }) => {
+    const login = new Login({ page });
+    await login.clickForgotPassword();
+})
+
 test('Login using phone number', async ({ page }) => {
     const login = new Login({ page });
 
