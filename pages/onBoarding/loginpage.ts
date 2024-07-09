@@ -52,4 +52,9 @@ export class Login{
         await expect(this.forgetPwd_btn).toBeVisible();
         await this.forgetPwd_btn.click();
     }
+
+    async clickFacebook() {
+        await expect(this.facebook_btn).toBeVisible();
+        await this.facebook_btn.click();
+    }
 }

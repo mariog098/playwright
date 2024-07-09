@@ -22,6 +22,10 @@ test('Forgot password', async ({ page }) => {
 
 test('Login using phone number', async ({ page }) => {
     const login = new Login({ page });
-
     await login.clickLogInPhone();
+})
+
+test('Login using FB button', async ({ page }) => {
+    const login = new Login({ page });
+    await login.clickFacebook();
 })
