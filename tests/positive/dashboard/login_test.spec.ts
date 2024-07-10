@@ -1,4 +1,4 @@
-import { test } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import { Constants } from "../../../utility/cosntant";
 import { Login } from "../../../pages/onBoarding/loginpage";
 
@@ -8,8 +8,8 @@ test.beforeEach(async ({ page }) => {
 
 test('Login User', async ({ page }) => {
     const login = new Login({ page });
-    await login.inputUsername('cemphes@gmail.com');
-    await login.inputPassword('Utiwmzx2');
+    await login.inputUsername(Constants.username);
+    await login.inputPassword(Constants.password);
     await login.showPassword();
     await login.clickLogin();
 
@@ -18,6 +18,7 @@ test('Login User', async ({ page }) => {
 test('Forgot password', async ({ page }) => {
     const login = new Login({ page });
     await login.clickForgotPassword();
+    await expect(page.locator('text=Reset Password').getByText('Reset Password')).toBeVisible();
 })
 
 test('Login using phone number', async ({ page }) => {
@@ -25,3 +26,4 @@ test('Login using phone number', async ({ page }) => {
 
     await login.clickLogInPhone();
 })
+
