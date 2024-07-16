@@ -20,7 +20,6 @@ export class Homepage {
 
     async clickIcon() {
         await expect(this.icon).toBeVisible();
-        // await this.icon.click();
     }
 
     async inputSearchField(keyword) {
