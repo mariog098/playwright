@@ -57,4 +57,6 @@ export class Login{
         await expect(this.facebook_btn).toBeVisible();
         await this.facebook_btn.click();
     }
+
+    
 }
