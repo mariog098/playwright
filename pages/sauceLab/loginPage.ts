@@ -20,6 +20,11 @@ export class LoginSauce {
     async clickLogin() {
         await this.loginBtn.click();
     }
+    async loginUser(username: string, password: string) {
+        await this.inputUsername(username);
+        await this.inputPassword(password);
+        await this.clickLogin();
+    }
 }
 
 export class DashbordSauce {
